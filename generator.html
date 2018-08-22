@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace SoloLearn
+{
+    class Program
+    {
+    
+        static string[] TextToPrint = 
+        {
+           "1. At every doorway<br>
+before you enter,<br>
+you should take a good look around--<br>
+for you never know where your enemies<br>
+might be seated within.<br>", //0
+           "2. Hail to a good host!<br>
+A guest has come inside, where should he sit?<br>
+He is impatient,<br>
+stranding on the threshold, ready to try his luck.<br>",
+           "3. He needs fire,<br>
+the one who has just come in,<br>
+his knees are shivering.<br>
+Food and dry clothes<br>
+will do him well,<br>
+after his journey over the mountains.<br>",
+           "4. He needs water,<br>
+the one who has just arrived,<br>
+dry clothes, and a warm welcome<br>
+from a friendly host--<br>
+and if he can get it,<br>
+a chance to listen and be listened to.<br>",
+           "5. A man needs wisdom<br>
+if he plans to wander widely;<br>
+life is easier at home.<br>
+He'll be laughed at<br>
+if he sits among the wsie<br>
+and has nothing to say.<br>",
+           "6. A wise man<br>
+is not showy about his wisdom;<br>
+he guards it carefully.<br>
+He is silent when he comes<br>
+to a stranger's home.<br>
+The wise man seldom wanders into harm,<br>
+for you can never have<br>
+a more faithful friend<br>
+than a good supply of wisdom.<br>",
+           "7. The watchful guest,<br>
+when he arrives for a meal,<br>
+should keep his mouth shut,<br>
+listening with his ears<br>
+and watching wit his eyes--<br>
+that's how the wise get wiser.<br>",
+           "8. A man is happy<br>
+if he finds praise and friendship<br>
+within himself.<br>
+You can never be sure<br>
+of where you stand<br>
+in someone else's heart.<br>",
+           "9. A man is happy<br>
+if he finds good advice<br>
+within himself.<br>
+Many men have received bad advice<br>
+by trusting someone else.<Br>" //8
+           };
+           //^^^ is what TextToPrint has. You also can replace the words with numbers, but here is an simpler function for that.
+           
+        static void Main(string[] args)
+        
+        {
+        Random r = new Random();
+        /* ^^ this creates a new random number generator*/
+        
+        
+        int PickedText = r.Next(TextToPrint.Length);
+        //PickedText makes the TextToPrint goes through the randomnumber generator. Once the RandomNo Generator picks the element inside the TextToPrint, it converts to which order the element is in, then afterwards PickedText becomes the number of that order.
+        
+        //alternatively, since there are 8 elements inside TextToPrint, you can put the number'8' inside the bracket too!
+        
+        Console.WriteLine(TextToPrint[PickedText]);
+        }
+    }
+}
